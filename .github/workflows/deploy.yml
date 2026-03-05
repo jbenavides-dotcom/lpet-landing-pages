@@ -1,0 +1,65 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: ['main']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: 'pages'
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Build USA
+        run: |
+          cd usa
+          npm ci
+          npm run build
+
+      - name: Build Japan
+        run: |
+          cd japan
+          npm ci
+          npm run build
+
+      - name: Merge builds
+        run: |
+          mkdir -p dist/usa dist/japan
+          cp -r usa/dist/* dist/usa/
+          cp -r japan/dist/* dist/japan/
+          cp docs/index.html dist/index.html 2>/dev/null || echo '<html><head><meta charset="utf-8"><title>LP&ET Landing Pages</title><style>body{font-family:sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;gap:2rem;background:#1a1a1a;color:#fff}a{color:#E8838C;font-size:1.25rem}</style></head><body><h1>La Palma & El Tucan - Landing Pages</h1><a href="usa/">USA - Roasted Series</a><a href="japan/">Japan - Kodawari Series</a></body></html>' > dist/index.html
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './dist'
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
