@@ -19,12 +19,12 @@ export const ASSETS = {
 
   // Product images (Cloudinary optimized)
   productos: {
-    legendary: `${CLOUDINARY_BASE}/${CLOUDINARY_OPT}/lpet/productos/legendary_front.png`,
-    legendaryFront: `${CLOUDINARY_BASE}/${CLOUDINARY_OPT}/lpet/productos/legendary_front.png`,
-    geisha: `${CLOUDINARY_BASE}/${CLOUDINARY_OPT}/lpet/productos/geisha_front.png`,
-    sidra: `${CLOUDINARY_BASE}/${CLOUDINARY_OPT}/lpet/productos/sidra_front.png`,
-    palmaBlend: `${CLOUDINARY_BASE}/${CLOUDINARY_OPT}/lpet/productos/palma_front.png`,
-    tucanBlend: `${CLOUDINARY_BASE}/${CLOUDINARY_OPT}/lpet/productos/tucan_front.png`,
+    legendary: `${CLOUDINARY_BASE}/${CLOUDINARY_OPT}/lpet-usa/legendary.png`,
+    legendaryFront: `${CLOUDINARY_BASE}/${CLOUDINARY_OPT}/lpet-usa/legendary.png`,
+    geisha: `${CLOUDINARY_BASE}/${CLOUDINARY_OPT}/lpet-usa/sidra.png`,
+    sidra: `${CLOUDINARY_BASE}/${CLOUDINARY_OPT}/lpet-usa/sidra.png`,
+    palmaBlend: `${CLOUDINARY_BASE}/${CLOUDINARY_OPT}/lpet-usa/palma.png`,
+    tucanBlend: `${CLOUDINARY_BASE}/${CLOUDINARY_OPT}/lpet-usa/tucan.png`,
     tresBolsas: `${BASE_PATH}/productos/ascca.png`,
   },
 
