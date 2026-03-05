@@ -1,23 +1,30 @@
-// Asset URLs - Replace with Cloudinary URLs when ready
-// Use Vite's base URL for GitHub Pages compatibility
+// Asset URLs - Shopify CDN + Cloudinary optimized
+// Shopify CDN for banners, Cloudinary for product images
+const SHOPIFY_CDN = 'https://3ys3kk1igt4wb33d-92559802671.shopifypreview.com/cdn/shop/files';
+const CLOUDINARY_BASE = 'https://res.cloudinary.com/dsylu9a7k/image/upload';
+const CLOUDINARY_OPT = 'f_auto,q_auto,w_800';
 const BASE_PATH = `${import.meta.env.BASE_URL}images`;
 
 export const ASSETS = {
-  // Hero images
+  // Logo
+  logo: `${SHOPIFY_CDN}/Logo_principal.png`,
+
+  // Hero images (Shopify CDN)
   hero: {
-    banner: `${BASE_PATH}/hero/hero_banner_born_at_origin.png`,
-    felipeCaballo: `${BASE_PATH}/hero/hero_felipe_caballo.jpg`,
-    fincaBosque: `${BASE_PATH}/hero/hero_finca_bosque_niebla.jpg`,
+    banner: `${SHOPIFY_CDN}/banner_principal_e0139d1d-ba7d-4db7-a006-1c9cc416bd1b.jpg`,
+    felipeCaballo: `${SHOPIFY_CDN}/DJI_0246_bcb04b78-b07a-4a3e-8804-63915ae01e25.jpg`,
+    fincaBosque: `${SHOPIFY_CDN}/banner_2.jpg`,
+    aerial: `${SHOPIFY_CDN}/2_38fb59ff-e556-4505-9d2a-954c07c34115.jpg`,
   },
 
-  // Product images
+  // Product images (Cloudinary optimized)
   productos: {
-    legendary: `${BASE_PATH}/productos/Legendary.png`,
-    legendaryFront: `${BASE_PATH}/productos/LP&ET Legendary Front.png`,
-    geisha: `${BASE_PATH}/productos/Single-OriginSIDRA3.png`,
-    sidra: `${BASE_PATH}/productos/Single-OriginSIDRA3.png`,
-    palmaBlend: `${BASE_PATH}/productos/PalmaBlend1.png`,
-    tucanBlend: `${BASE_PATH}/productos/Tucan-Blend.png`,
+    legendary: `${CLOUDINARY_BASE}/${CLOUDINARY_OPT}/lpet/productos/legendary_front.png`,
+    legendaryFront: `${CLOUDINARY_BASE}/${CLOUDINARY_OPT}/lpet/productos/legendary_front.png`,
+    geisha: `${CLOUDINARY_BASE}/${CLOUDINARY_OPT}/lpet/productos/geisha_front.png`,
+    sidra: `${CLOUDINARY_BASE}/${CLOUDINARY_OPT}/lpet/productos/sidra_front.png`,
+    palmaBlend: `${CLOUDINARY_BASE}/${CLOUDINARY_OPT}/lpet/productos/palma_front.png`,
+    tucanBlend: `${CLOUDINARY_BASE}/${CLOUDINARY_OPT}/lpet/productos/tucan_front.png`,
     tresBolsas: `${BASE_PATH}/productos/ascca.png`,
   },
 

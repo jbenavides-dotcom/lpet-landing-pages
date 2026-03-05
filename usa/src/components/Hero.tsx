@@ -36,19 +36,19 @@ export default function Hero() {
 
         {/* Eyebrow */}
         <p className="text-brand-gold uppercase tracking-[0.3em] text-xs md:text-sm mb-4 font-medium">
-          Producer-Roasted in Colombia's Cloud Forest
+          Honest Specialty Coffee from Colombia
         </p>
 
         {/* Headline */}
         <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-[1.1]">
-          Specialty Coffee<br />
-          <span className="text-brand-beige">From Our Farm to Your Cup</span>
+          Some say coffee is for the soul.<br />
+          <span className="text-brand-beige">We think coffee is from the soul.</span>
         </h1>
 
         {/* Subheadline */}
         <p className="text-lg md:text-xl lg:text-2xl text-brand-beige/90 mb-6 max-w-2xl mx-auto leading-relaxed">
-          Geisha, Sidra & rare varietals. Roasted at origin,
-          shipped fresh from Miami to your door.
+          Rare varietals grown, processed, and roasted by the same hands.
+          Shipped fresh from our farm to your door.
         </p>
 
         {/* Price Point - CRITICAL FOR CONVERSION */}

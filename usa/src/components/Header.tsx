@@ -1,17 +1,20 @@
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
+import { ASSETS } from '../constants/assets';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-brand-cream/95 backdrop-blur-sm">
-      <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-brand-border">
+      <nav className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2">
-          <span className="text-2xl font-bold text-brand-dark">
-            LA PALMA <span className="text-brand-gold">&</span> EL TUCÁN
-          </span>
+        <a href="#" className="flex items-center">
+          <img
+            src={ASSETS.logo}
+            alt="La Palma & El Tucán"
+            className="h-12 w-auto"
+          />
         </a>
 
         {/* Desktop Navigation */}
@@ -44,7 +47,7 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-brand-cream border-t border-brand-beige">
+        <div className="md:hidden bg-white border-t border-brand-border">
           <div className="px-6 py-4 flex flex-col gap-4">
             <a href="#products" className="text-brand-dark py-2">Products</a>
             <a href="#process" className="text-brand-dark py-2">Our Process</a>

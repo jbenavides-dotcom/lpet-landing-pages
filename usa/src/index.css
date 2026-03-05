@@ -8,8 +8,13 @@ html {
 }
 
 body {
-  @apply bg-brand-cream text-brand-dark antialiased;
+  @apply bg-white text-brand-dark antialiased;
+  font-family: 'Jost', sans-serif;
   margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Tenor Sans', serif;
 }
 
 /* Custom components */
