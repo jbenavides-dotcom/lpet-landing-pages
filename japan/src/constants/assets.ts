@@ -26,11 +26,12 @@ export const ASSETS = {
     tucanHover: `${CLOUDINARY_BASE}/${CLOUDINARY_OPT}/lpet-japan/tucan-3angles.jpg`,
   },
   proceso: {
-    vivero: `${BASE_PATH}/proceso/proceso_02_vivero_secaderos.jpg`,
-    cultivo: `${BASE_PATH}/proceso/proceso_01_cultivo_cafetales.jpg`,
-    cereza: `${BASE_PATH}/proceso/proceso_03_cereza_madura.jpg`,
-    secado: `${BASE_PATH}/proceso/proceso_04_secado_natural.jpg`,
-    lavado: `${CLOUDINARY_BASE}/${CLOUDINARY_OPT}/lpet-japan/proceso-lavado.jpg`,
+    vivero: `${CLOUDINARY_BASE}/${CLOUDINARY_OPT}/lpet-japan/proceso-vivero.jpg`,
+    cultivo: `${CLOUDINARY_BASE}/${CLOUDINARY_OPT}/lpet-japan/proceso-cultivo.jpg`,
+    cereza: `${CLOUDINARY_BASE}/${CLOUDINARY_OPT}/lpet-japan/proceso-cereza.jpg`,
+    secado: `${CLOUDINARY_BASE}/${CLOUDINARY_OPT}/lpet-japan/proceso-secado.jpg`,
+    fermentacion: `${CLOUDINARY_BASE}/${CLOUDINARY_OPT}/lpet-japan/proceso-fermentacion.jpg`,
+    tostadora: `${CLOUDINARY_BASE}/${CLOUDINARY_OPT}/lpet-japan/proceso-tostadora.jpg`,
   },
   equipo: {
     fundadores: `${BASE_PATH}/equipo/fundadores_felipe_elisa.jpg`,
@@ -163,13 +164,13 @@ export const PRODUCTS = [
 ];
 
 export const PROCESS_STEPS = [
-  { step: 1, title: 'Nursery', titleJp: '育苗', description: 'Seeds germinate in our nursery for 6-8 months', descriptionJp: '苗床で6〜8ヶ月間、丁寧に育てます', image: ASSETS.proceso.vivero },
-  { step: 2, title: 'Planting', titleJp: '植付け', description: 'Transplanted to shade-grown lots at 1,700m', descriptionJp: '標高1,700mの日陰栽培区画に移植', image: ASSETS.proceso.cultivo },
+  { step: 1, title: 'Nursery', titleJp: '育苗', description: 'Seeds germinate in our nursery for 6-8 months', descriptionJp: '苗床で6〜8ヶ月間、種から丁寧に育てます', image: ASSETS.proceso.vivero },
+  { step: 2, title: 'Planting', titleJp: '植付け', description: 'Transplanted to shade-grown lots at 1,700m', descriptionJp: '標高1,700mの雲霧林に移植します', image: ASSETS.proceso.cultivo },
   { step: 3, title: 'Cultivation', titleJp: '栽培', description: '3-4 years of careful growth under forest canopy', descriptionJp: '原生林の木陰で3〜4年、丹念に育成', image: ASSETS.proceso.cultivo },
-  { step: 4, title: 'Harvest', titleJp: '収穫', description: 'Hand-picked at peak ripeness', descriptionJp: '完熟を見極め、一粒ずつ手摘み', image: ASSETS.proceso.cereza },
-  { step: 5, title: 'Fermentation', titleJp: '発酵', description: 'Proprietary processes: Lactic, Bio-Innovation', descriptionJp: '独自製法：乳酸発酵、バイオイノベーション', image: ASSETS.proceso.lavado },
-  { step: 6, title: 'Drying', titleJp: '乾燥', description: 'African raised beds for 15-25 days', descriptionJp: 'アフリカンベッドで15〜25日間、管理乾燥', image: ASSETS.proceso.secado },
-  { step: 7, title: 'Roasting', titleJp: '焙煎', description: 'Same hands that grew it, roast it fresh for you', descriptionJp: '育てた同じ手で、あなたのために焙煎', image: ASSETS.tostadora.frontal },
+  { step: 4, title: 'Harvest', titleJp: '収穫', description: 'Hand-picked at peak ripeness, cherry by cherry', descriptionJp: '完熟を見極め、一粒ずつ手摘みで収穫', image: ASSETS.proceso.cereza },
+  { step: 5, title: 'Fermentation', titleJp: '発酵', description: 'Proprietary lactic & bio-innovation processes', descriptionJp: '独自の乳酸発酵とバイオイノベーション製法', image: ASSETS.proceso.fermentacion },
+  { step: 6, title: 'Drying', titleJp: '乾燥', description: 'African raised beds for 15-25 days of controlled drying', descriptionJp: 'アフリカンベッドで15〜25日間、丁寧に乾燥', image: ASSETS.proceso.secado },
+  { step: 7, title: 'Roasting', titleJp: '焙煎', description: 'Same hands that grew it, roast it fresh for you', descriptionJp: '育てた同じ手で、あなたのために新鮮焙煎', image: ASSETS.proceso.tostadora },
 ];
 
 export const SUSTAINABILITY_STATS = [
